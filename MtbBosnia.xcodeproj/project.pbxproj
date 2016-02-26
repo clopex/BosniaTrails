@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23074B301C7F563C0029F799 /* ServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23074B2F1C7F563C0029F799 /* ServicesVC.swift */; };
+		23074B321C8040C30029F799 /* ListaStaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23074B311C8040C30029F799 /* ListaStaza.swift */; };
 		23DF01BD1C7DEA4C00F80926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01BC1C7DEA4C00F80926 /* AppDelegate.swift */; };
 		23DF01BF1C7DEA4C00F80926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01BE1C7DEA4C00F80926 /* ViewController.swift */; };
 		23DF01C21C7DEA4C00F80926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01C01C7DEA4C00F80926 /* Main.storyboard */; };
 		23DF01C41C7DEA4C00F80926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01C31C7DEA4C00F80926 /* Assets.xcassets */; };
 		23DF01C71C7DEA4C00F80926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01C51C7DEA4C00F80926 /* LaunchScreen.storyboard */; };
+		23DF01D11C7E00F900F80926 /* ViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01D01C7E00F900F80926 /* ViewCustom.swift */; };
+		23DF01D41C7E015100F80926 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01D31C7E015100F80926 /* Constants.swift */; };
+		23DF01D61C7F087D00F80926 /* TrailsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01D51C7F087D00F80926 /* TrailsListVC.swift */; };
+		23DF01D81C7F3DEB00F80926 /* TrailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01D71C7F3DEB00F80926 /* TrailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23074B2F1C7F563C0029F799 /* ServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesVC.swift; sourceTree = "<group>"; };
+		23074B311C8040C30029F799 /* ListaStaza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaStaza.swift; sourceTree = "<group>"; };
 		23DF01B91C7DEA4C00F80926 /* MtbBosnia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MtbBosnia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DF01BC1C7DEA4C00F80926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DF01BE1C7DEA4C00F80926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,10 @@
 		23DF01C31C7DEA4C00F80926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23DF01C61C7DEA4C00F80926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23DF01C81C7DEA4C00F80926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23DF01D01C7E00F900F80926 /* ViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustom.swift; sourceTree = "<group>"; };
+		23DF01D31C7E015100F80926 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23DF01D51C7F087D00F80926 /* TrailsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailsListVC.swift; sourceTree = "<group>"; };
+		23DF01D71C7F3DEB00F80926 /* TrailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,28 @@
 		23DF01BB1C7DEA4C00F80926 /* MtbBosnia */ = {
 			isa = PBXGroup;
 			children = (
+				23DF01D21C7E013800F80926 /* Util */,
 				23DF01BC1C7DEA4C00F80926 /* AppDelegate.swift */,
 				23DF01BE1C7DEA4C00F80926 /* ViewController.swift */,
 				23DF01C01C7DEA4C00F80926 /* Main.storyboard */,
 				23DF01C31C7DEA4C00F80926 /* Assets.xcassets */,
 				23DF01C51C7DEA4C00F80926 /* LaunchScreen.storyboard */,
 				23DF01C81C7DEA4C00F80926 /* Info.plist */,
+				23DF01D01C7E00F900F80926 /* ViewCustom.swift */,
+				23DF01D51C7F087D00F80926 /* TrailsListVC.swift */,
+				23DF01D71C7F3DEB00F80926 /* TrailCell.swift */,
+				23074B2F1C7F563C0029F799 /* ServicesVC.swift */,
+				23074B311C8040C30029F799 /* ListaStaza.swift */,
 			);
 			path = MtbBosnia;
+			sourceTree = "<group>";
+		};
+		23DF01D21C7E013800F80926 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				23DF01D31C7E015100F80926 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DF01D11C7E00F900F80926 /* ViewCustom.swift in Sources */,
+				23074B301C7F563C0029F799 /* ServicesVC.swift in Sources */,
 				23DF01BF1C7DEA4C00F80926 /* ViewController.swift in Sources */,
+				23074B321C8040C30029F799 /* ListaStaza.swift in Sources */,
+				23DF01D81C7F3DEB00F80926 /* TrailCell.swift in Sources */,
 				23DF01BD1C7DEA4C00F80926 /* AppDelegate.swift in Sources */,
+				23DF01D41C7E015100F80926 /* Constants.swift in Sources */,
+				23DF01D61C7F087D00F80926 /* TrailsListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +319,7 @@
 				23DF01CD1C7DEA4C00F80926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
