@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2302E2761C8D84D700E4F066 /* Servisi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302E2751C8D84D700E4F066 /* Servisi.swift */; };
+		2302E27A1C8D8A7900E4F066 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302E2791C8D8A7900E4F066 /* ServicesCell.swift */; };
+		2302E27C1C8DA70900E4F066 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302E27B1C8DA70900E4F066 /* WebViewVC.swift */; };
+		2302E27E1C8DA96C00E4F066 /* ServiceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2302E27D1C8DA96C00E4F066 /* ServiceDetailVC.swift */; };
 		23074B301C7F563C0029F799 /* ServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23074B2F1C7F563C0029F799 /* ServicesVC.swift */; };
 		23074B321C8040C30029F799 /* ListaStaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23074B311C8040C30029F799 /* ListaStaza.swift */; };
+		23074B341C8080FC0029F799 /* DetailTrailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23074B331C8080FC0029F799 /* DetailTrailVC.swift */; };
+		23074B381C8099430029F799 /* SlikaMapeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23074B371C8099430029F799 /* SlikaMapeVC.swift */; };
 		23DF01BD1C7DEA4C00F80926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01BC1C7DEA4C00F80926 /* AppDelegate.swift */; };
 		23DF01BF1C7DEA4C00F80926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF01BE1C7DEA4C00F80926 /* ViewController.swift */; };
 		23DF01C21C7DEA4C00F80926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DF01C01C7DEA4C00F80926 /* Main.storyboard */; };
@@ -21,8 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2302E2751C8D84D700E4F066 /* Servisi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servisi.swift; sourceTree = "<group>"; };
+		2302E2791C8D8A7900E4F066 /* ServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
+		2302E27B1C8DA70900E4F066 /* WebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		2302E27D1C8DA96C00E4F066 /* ServiceDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailVC.swift; sourceTree = "<group>"; };
 		23074B2F1C7F563C0029F799 /* ServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesVC.swift; sourceTree = "<group>"; };
 		23074B311C8040C30029F799 /* ListaStaza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaStaza.swift; sourceTree = "<group>"; };
+		23074B331C8080FC0029F799 /* DetailTrailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTrailVC.swift; sourceTree = "<group>"; };
+		23074B371C8099430029F799 /* SlikaMapeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlikaMapeVC.swift; sourceTree = "<group>"; };
 		23DF01B91C7DEA4C00F80926 /* MtbBosnia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MtbBosnia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DF01BC1C7DEA4C00F80926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DF01BE1C7DEA4C00F80926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +89,13 @@
 				23DF01D51C7F087D00F80926 /* TrailsListVC.swift */,
 				23DF01D71C7F3DEB00F80926 /* TrailCell.swift */,
 				23074B2F1C7F563C0029F799 /* ServicesVC.swift */,
+				23074B331C8080FC0029F799 /* DetailTrailVC.swift */,
+				2302E27D1C8DA96C00E4F066 /* ServiceDetailVC.swift */,
+				23074B371C8099430029F799 /* SlikaMapeVC.swift */,
 				23074B311C8040C30029F799 /* ListaStaza.swift */,
+				2302E2751C8D84D700E4F066 /* Servisi.swift */,
+				2302E2791C8D8A7900E4F066 /* ServicesCell.swift */,
+				2302E27B1C8DA70900E4F066 /* WebViewVC.swift */,
 			);
 			path = MtbBosnia;
 			sourceTree = "<group>";
@@ -163,13 +181,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				23DF01D11C7E00F900F80926 /* ViewCustom.swift in Sources */,
+				2302E27A1C8D8A7900E4F066 /* ServicesCell.swift in Sources */,
 				23074B301C7F563C0029F799 /* ServicesVC.swift in Sources */,
 				23DF01BF1C7DEA4C00F80926 /* ViewController.swift in Sources */,
 				23074B321C8040C30029F799 /* ListaStaza.swift in Sources */,
+				23074B381C8099430029F799 /* SlikaMapeVC.swift in Sources */,
 				23DF01D81C7F3DEB00F80926 /* TrailCell.swift in Sources */,
+				23074B341C8080FC0029F799 /* DetailTrailVC.swift in Sources */,
 				23DF01BD1C7DEA4C00F80926 /* AppDelegate.swift in Sources */,
 				23DF01D41C7E015100F80926 /* Constants.swift in Sources */,
 				23DF01D61C7F087D00F80926 /* TrailsListVC.swift in Sources */,
+				2302E27E1C8DA96C00E4F066 /* ServiceDetailVC.swift in Sources */,
+				2302E27C1C8DA70900E4F066 /* WebViewVC.swift in Sources */,
+				2302E2761C8D84D700E4F066 /* Servisi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets-2";
 				INFOPLIST_FILE = MtbBosnia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.MtbBosnia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -293,10 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets-2";
 				INFOPLIST_FILE = MtbBosnia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.MtbBosnia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

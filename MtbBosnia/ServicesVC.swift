@@ -8,50 +8,108 @@
 
 import UIKit
 
-class ServicesVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ServicesVC: UIViewController,UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
 
     @IBOutlet weak var tableViewS: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
-    var nazivRadnje = ["Babanovac – Galica – Šantić – Markovac","Babanovac – Galica – Kraljica – Markovac","Babanovac – Galica – Paljenik – Markovac","Babin dol – Dujmovići – Dejčići – Babin dol","Babin dol – Lukomir – Tarčin","Babin dol – Lukomir – Umoljani – Šabići","Bakovići – Brusnica – Vrankamen","Bakovići – Zec – Vranica – Tovarište","Barice – Čavljak – Skakavac","Bjelašnica – Visočica – Boračko jezero – Konjic"]
-    var imeGrada = ["17.3km","29km","24.7km","41.7km","77.7km","49km","30.8km","33.7km","32.2km","80.6km",]
-    //var brojTelefona = ["445m","760m","785m","927m","1082m","1300m","1263m","1677m","1078m","1556m",]
-    var slikaRadnje = ["1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg","6.jpeg","7.jpeg","8.jpeg","9.jpeg","10.jpeg",]
+    var listaGradova = [Servisi]()
+    var filterGradova = [Servisi]()
+    var inSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewS.delegate = self
         tableViewS.dataSource = self
+        searchBar.delegate = self
 
-        // Do any additional setup after loading the view.
+        for var i=0; i <= imeGrada.count-1; ++i {
+            let tmp = Servisi(nazivServisa: nazivRadnje[i], gradServisa: imeGrada[i], imgId: slikaRadnje[i])
+            
+            listaGradova.append(tmp)
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if inSearchMode {
+            return filterGradova.count
+        }
+        
+        return listaGradova.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("TrailCell") as? TrailCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier("ServisCell") as? ServicesCell {
             
-            var img: UIImage!
+            let unos: Servisi!
             
-            //img = UIImage(named: self.slikaStaze[indexPath.row])
+            if inSearchMode {
+                unos = filterGradova[indexPath.row]
+            } else {
+                unos = listaGradova[indexPath.row]
+            }
             
-            //cell.confCell(img, nazivLbl: nazivStaze[indexPath.row], usponLbl: visinaRute[indexPath.row], duzinaLbl: duzinaStaze[indexPath.row])
+            cell.configureCell(unos)
             
             return cell
             
         } else {
-            return TrailCell()
+            return ServicesCell()
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var index: Servisi!
+        
+        if inSearchMode {
+            index = filterGradova[indexPath.row]
+        } else {
+            index = listaGradova[indexPath.row]
+        }
+        
+        //print(index)
+        performSegueWithIdentifier("ServiceDetail", sender: index)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ServiceDetail" {
+            if let serviceDetail = segue.destinationViewController as? ServiceDetailVC {
+                if let tmp = sender as? Servisi {
+                    serviceDetail.infoServis = tmp
+                }
+            }
+        }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func mainBtn(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            view.endEditing(true)
+            tableViewS.reloadData()
+        } else {
+            inSearchMode = true
+            
+            let lower = searchBar.text!.lowercaseString
+            filterGradova = listaGradova.filter({$0.gradServisa.rangeOfString(lower) != nil })
+            tableViewS.reloadData()
         }
     }
 }
